@@ -15,7 +15,11 @@ public class SelectionSorter extends Sorter {
     
 
     /**
-      sort the user's data, implementing insertion sort
+	Pre-condition: The list must hold String data objects.
+	
+    Run reigningDweeb for posisitions 0 through n - 2
+	
+	Post-condition: The list encapsulated in the Sorter class will be returned sorted
      */
     public void mySort() {
         for (int index = 0; index < elements.size(); index++){
@@ -26,10 +30,17 @@ public class SelectionSorter extends Sorter {
 			// System.out.println( "current progress: " + elements );
 		}
 	}
+	/**
+	Pre-condition: There must exist a sorted and unsorted portion of the list.
+	
+	Find the smallest value in the unsorted region.
+	Swap it with the first value in the unsorted region, thereby expanding the sorted region
+	
+	Post-condition: The minimum of the unsorted region will be the last element of the sorted region.
 	
 	private int champIndex(int minIndex) {
-		 String champ = "ZZZZZZZZ";
-		 for (int index = minIndex; index < elements.size(); index++){
+		 String champ = elements.get(minIndex);
+		 for (int index = minIndex + 1; index < elements.size(); index++){
 			 if (elements.get(index).compareTo(champ) < 0){
 				 minIndex = index;
 				 champ = elements.get(index);
