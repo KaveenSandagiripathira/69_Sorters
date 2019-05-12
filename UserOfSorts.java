@@ -34,16 +34,17 @@ public class UserOfSorts {
                  from having the special property of being last in
                  the input list.
                */
-            , "Z"  
+            , "Z" 
             ));
 
         // insertion sort                   
         // oneTest( "insertion sort "
                // , new InsertionSorter( unsorted)
                // );
-	    oneTest( "selection sort "
-               , new SelectionSorter( unsorted)
-               );
+	    // oneTest( "selection sort "
+               // , new SelectionSorter( unsorted)
+               // );
+		oneTest("merge sort", new SubSortThenMerge_Sorter(unsorted));
     }
 
 

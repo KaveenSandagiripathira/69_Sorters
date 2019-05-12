@@ -37,6 +37,7 @@ public class SelectionSorter extends Sorter {
 	Swap it with the first value in the unsorted region, thereby expanding the sorted region
 	
 	Post-condition: The minimum of the unsorted region will be the last element of the sorted region.
+	*/
 	
 	private int champIndex(int minIndex) {
 		 String champ = elements.get(minIndex);
